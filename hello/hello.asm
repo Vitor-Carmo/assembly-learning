@@ -2,7 +2,7 @@
 ; Linkedição -> ld -s -o hello hello.o  -> tranformar em executavel 
 
 section .data ; constantes
-  msg: db 'Hello World!', 0xA
+  msg: db 'Hello World!', 0xA, 0xD
   tam: equ $- msg
 
 section .text
