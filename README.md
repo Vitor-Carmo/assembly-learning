@@ -47,7 +47,30 @@ all: $(NOME).o
   nasm -f elf64 $<
 ```
 
+## O que são registradores?
 
+São **posições de memória** dentro do processador com nomes específicos, é como se fossem **variáveis**.
+
+## Como é o funcionamento básico de um Registrador?
+
+São endereços que armazenam dados por um curto período para que o processador possa manipular esse dado ou usá-lo para manipular algum outro. Inclusive alguns servem para controle fundamental do funcionamento do processador ou da execução do seu código, em geral coisas que você nem sabe se existe.
+
+
+## O mínimo que você precisa para rodar um programa em assembly:
+
+
+```nasm
+section .data
+
+section .text
+
+global _start
+
+_start:
+  mov eax, 0x1
+  mov ebx, 0x0
+  int 0x80
+```
 
 ## Tipos de dados
 
